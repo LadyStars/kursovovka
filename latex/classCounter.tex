@@ -1,0 +1,58 @@
+\hypertarget{classCounter}{}\doxysection{Класс Counter}
+\label{classCounter}\index{Counter@{Counter}}
+
+
+Класс для вычислений по вектору  
+
+
+
+
+{\ttfamily \#include $<$Counter.\+h$>$}
+
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCounter_a1e05f69b5240fbab3e7ab351672167f0}\label{classCounter_a1e05f69b5240fbab3e7ab351672167f0}} 
+\mbox{\hyperlink{classCounter_a1e05f69b5240fbab3e7ab351672167f0}{Counter}} ()
+\begin{DoxyCompactList}\small\item\em Конструктор без параметров \end{DoxyCompactList}\item 
+int16\+\_\+t $\ast$ \mbox{\hyperlink{classCounter_a008d2321eb92a7dcee13b4bb320022d9}{summ}} (std\+::vector$<$ int16\+\_\+t $>$ arr)
+\begin{DoxyCompactList}\small\item\em Вычисляет сумму вектора \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс для вычислений по вектору 
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classCounter_a008d2321eb92a7dcee13b4bb320022d9}\label{classCounter_a008d2321eb92a7dcee13b4bb320022d9}} 
+\index{Counter@{Counter}!summ@{summ}}
+\index{summ@{summ}!Counter@{Counter}}
+\doxysubsubsection{\texorpdfstring{summ()}{summ()}}
+{\footnotesize\ttfamily int16\+\_\+t$\ast$ Counter\+::summ (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int16\+\_\+t $>$}]{arr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Вычисляет сумму вектора 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em arr,вектор,std\+::vector$<$int16\+\_\+t$>$} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+указатель на массив с результатом, int16\+\_\+t $\ast$ 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Исключения}
+{\em std\+::server\+\_\+error} & в случае ошибки, критическая 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{type = invalid\_argument, what =\textcolor{stringliteral}{"{}Count Error"{}}}
+
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyExceptions}
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Counter_8h}{Counter.\+h}}\end{DoxyCompactItemize}

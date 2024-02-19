@@ -1,0 +1,86 @@
+\hypertarget{conversation_8h}{}\doxysection{Файл conversation.\+h}
+\label{conversation_8h}\index{conversation.h@{conversation.h}}
+
+
+Функция взаимодействия сервера с клиентом  
+
+
+{\ttfamily \#include \char`\"{}Auth.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Counter.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Data\+Base.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include \char`\"{}Web\+Manager.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Error\+Tracker.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+Граф включаемых заголовочных файлов для conversation.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{conversation_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{conversation_8h_af8809a02f4597181e830200ba3f0d9f0}{conversation}} (unsigned int port, std\+::string Log\+Name, \mbox{\hyperlink{classDB}{DB}} new\+\_\+db, int sock)
+\begin{DoxyCompactList}\small\item\em Функция взаимодействия сервера с клиентом \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Функция взаимодействия сервера с клиентом 
+
+\begin{DoxyAuthor}{Автор}
+Чапаева Е.\+В. 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Версия}
+1.\+0 
+\end{DoxyVersion}
+
+
+\doxysubsection{Функции}
+\mbox{\Hypertarget{conversation_8h_af8809a02f4597181e830200ba3f0d9f0}\label{conversation_8h_af8809a02f4597181e830200ba3f0d9f0}} 
+\index{conversation.h@{conversation.h}!conversation@{conversation}}
+\index{conversation@{conversation}!conversation.h@{conversation.h}}
+\doxysubsubsection{\texorpdfstring{conversation()}{conversation()}}
+{\footnotesize\ttfamily int conversation (\begin{DoxyParamCaption}\item[{unsigned int}]{port,  }\item[{std\+::string}]{Log\+Name,  }\item[{\mbox{\hyperlink{classDB}{DB}}}]{new\+\_\+db,  }\item[{int}]{sock }\end{DoxyParamCaption})}
+
+
+
+Функция взаимодействия сервера с клиентом 
+
+Алгоритм взаимодействия с клиентом\+:
+\begin{DoxyEnumerate}
+\item клиент устанавливает соединение
+\item клиент передает свой идентификатор ID 3а. сервер передает случайное число SALT16 (при успешной идентификации) 3б. сервер передает строку \char`\"{}\+ERR\char`\"{} и разрывает соединение(при ошибке идентификации)
+\item клиент передает HASHMD5( SALT16 $\vert$$\vert$ PASSWORD) 5а. сервер передает OK при успешной аутентификации 5б. сервер передает строку \char`\"{}\+ERR\char`\"{} и разрывает соединение(при ошибке аутентификации) начиная с шага 6 обмен в двоичном формате
+\item клиент посылает количество векторов ;
+\item клиент посылает размер первого вектора;
+\item клиент посылает все значения первого вектора одним блоком данных;
+\item сервер возвращает результат вычислений по первому вектору;
+\item шаги 7-\/9 повторяются для всех векторов
+\item клиент завершает соединение 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em port,порт,unsigned} & int \\
+\hline
+\mbox{\texttt{ in}}  & {\em Log\+Name,путь} & к файлу для записи логов, std\+::string \\
+\hline
+\mbox{\texttt{ in}}  & {\em new\+\_\+db,база} & данных пользователей, \mbox{\hyperlink{classDB}{DB}} \\
+\hline
+\mbox{\texttt{ in}}  & {\em sock,сокет,int} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Исключения}
+{\em std\+::server\+\_\+error} & в случае ошибки, критическая 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{type = invalid\_argument, what =\textcolor{stringliteral}{"{}Count Error"{}}}
+
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyExceptions}
+
+\end{DoxyEnumerate}

@@ -1,0 +1,111 @@
+\hypertarget{classAuth}{}\doxysection{Класс Auth}
+\label{classAuth}\index{Auth@{Auth}}
+
+
+Класс для аутентификации клиента на сервере  
+
+
+
+
+{\ttfamily \#include $<$Auth.\+h$>$}
+
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classAuth_a19ea0c3de029154f385c4e3815806efb}{Auth}} (std\+::string ID, std\+::string pass)
+\begin{DoxyCompactList}\small\item\em Конструктор для установки идентификатора и пароля клиента \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classAuth_ad573b4dce5a7e27084b7f8a211e2a2f4}{Gen\+SALT}} ()
+\begin{DoxyCompactList}\small\item\em Генерация случайной соли для вычисления хэша \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classAuth_a007d4b3ef7bf147a5f3b363b110750a9}{Compare\+Hashes}} (std\+::string Client\+Hash)
+\begin{DoxyCompactList}\small\item\em Сравнение хэша, присылаемого клиентом и хэша, вычисляемого внутри метода \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classAuth_aecdb012c861f84d05838f12032e1de28}\label{classAuth_aecdb012c861f84d05838f12032e1de28}} 
+std\+::string {\bfseries get\+SALT} ()
+\item 
+\mbox{\Hypertarget{classAuth_a7c2c109de414805628106c97668418a1}\label{classAuth_a7c2c109de414805628106c97668418a1}} 
+std\+::string {\bfseries get\+Id} ()
+\item 
+\mbox{\Hypertarget{classAuth_a0fa94505b570f1a804329290b846b032}\label{classAuth_a0fa94505b570f1a804329290b846b032}} 
+std\+::string {\bfseries getpass} ()
+\item 
+\mbox{\Hypertarget{classAuth_aaaea17cf383499998a7b4664fbe408ba}\label{classAuth_aaaea17cf383499998a7b4664fbe408ba}} 
+std\+::string {\bfseries getstr\+Hash} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Открытые атрибуты}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAuth_a3cf930b3ab2f4089ae65a43102d519c0}\label{classAuth_a3cf930b3ab2f4089ae65a43102d519c0}} 
+char \mbox{\hyperlink{classAuth_a3cf930b3ab2f4089ae65a43102d519c0}{ERRmsg}} \mbox{[}3\mbox{]} = \{\textquotesingle{}E\textquotesingle{}, \textquotesingle{}R\textquotesingle{},\textquotesingle{}R\textquotesingle{}\}
+\begin{DoxyCompactList}\small\item\em Сообщение, отсылаемое клиенту при ошибке его обрабоки \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classAuth_a7a3b1017666b06966e969c74650a3b6b}\label{classAuth_a7a3b1017666b06966e969c74650a3b6b}} 
+char \mbox{\hyperlink{classAuth_a7a3b1017666b06966e969c74650a3b6b}{OKmsg}} \mbox{[}2\mbox{]} = \{\textquotesingle{}O\textquotesingle{}, \textquotesingle{}K\textquotesingle{}\}
+\begin{DoxyCompactList}\small\item\em Сообщение, отсылаемое клиенту при успешной авторизации \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс для аутентификации клиента на сервере 
+
+\doxysubsection{Конструктор(ы)}
+\mbox{\Hypertarget{classAuth_a19ea0c3de029154f385c4e3815806efb}\label{classAuth_a19ea0c3de029154f385c4e3815806efb}} 
+\index{Auth@{Auth}!Auth@{Auth}}
+\index{Auth@{Auth}!Auth@{Auth}}
+\doxysubsubsection{\texorpdfstring{Auth()}{Auth()}}
+{\footnotesize\ttfamily Auth\+::\+Auth (\begin{DoxyParamCaption}\item[{std\+::string}]{ID,  }\item[{std\+::string}]{pass }\end{DoxyParamCaption})}
+
+
+
+Конструктор для установки идентификатора и пароля клиента 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em ID,идентификатор} & клиента, std\+::string. \\
+\hline
+\mbox{\texttt{ in}}  & {\em pass,пароль} & клиента, std\+::string. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classAuth_a007d4b3ef7bf147a5f3b363b110750a9}\label{classAuth_a007d4b3ef7bf147a5f3b363b110750a9}} 
+\index{Auth@{Auth}!CompareHashes@{CompareHashes}}
+\index{CompareHashes@{CompareHashes}!Auth@{Auth}}
+\doxysubsubsection{\texorpdfstring{CompareHashes()}{CompareHashes()}}
+{\footnotesize\ttfamily bool Auth\+::\+Compare\+Hashes (\begin{DoxyParamCaption}\item[{std\+::string}]{Client\+Hash }\end{DoxyParamCaption})}
+
+
+
+Сравнение хэша, присылаемого клиентом и хэша, вычисляемого внутри метода 
+
+Вычисляет MD5 хэш от строки SALT+password и сравнивает его с хэшем, который присылает клиент 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em Client\+Hash,хэш} & клиента, std\+::string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+bool, если хэши совпадают -\/ true, иначе false 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Исключения}
+{\em std\+::server\+\_\+error} & в случае несовпадения хэшей, штатная 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{type = invalid\_argument, what =\textcolor{stringliteral}{"{}Invalid hash"{}}}
+
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classAuth_ad573b4dce5a7e27084b7f8a211e2a2f4}\label{classAuth_ad573b4dce5a7e27084b7f8a211e2a2f4}} 
+\index{Auth@{Auth}!GenSALT@{GenSALT}}
+\index{GenSALT@{GenSALT}!Auth@{Auth}}
+\doxysubsubsection{\texorpdfstring{GenSALT()}{GenSALT()}}
+{\footnotesize\ttfamily void Auth\+::\+Gen\+SALT (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Генерация случайной соли для вычисления хэша 
+
+Соль -\/ 64-\/х разрядное число, представленное в виде строки из 16-\/ти шестнадцатиричных цифр 
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Auth_8h}{Auth.\+h}}\item 
+Auth.\+cpp\end{DoxyCompactItemize}
