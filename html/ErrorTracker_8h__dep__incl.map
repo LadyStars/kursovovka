@@ -1,0 +1,7 @@
+<map id="ErrorTracker.h" name="ErrorTracker.h">
+<area shape="rect" id="node1" title="Класс для обработки ошибок" alt="" coords="91,5,202,32"/>
+<area shape="rect" id="node2" href="$Auth_8h.html" title="Класс для аутентификации клиента на сервере" alt="" coords="5,80,69,107"/>
+<area shape="rect" id="node3" href="$conversation_8h.html" title="Функция взаимодействия сервера с клиентом" alt="" coords="87,155,206,181"/>
+<area shape="rect" id="node4" href="$Counter_8h.html" title="Класс для вычислений по вектору" alt="" coords="145,80,229,107"/>
+<area shape="rect" id="node5" href="$DataBase_8h.html" title="Класс для работы с базой данных пользователей" alt="" coords="253,80,350,107"/>
+</map>

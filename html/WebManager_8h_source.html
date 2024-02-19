@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Курсовая работа 22ПИ2 Чапаева Е.В.: Исходный файл WebManager.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Курсовая работа 22ПИ2 Чапаева Е.В.
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Сервер</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">WebManager.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="WebManager_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;string.h&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;sys/types.h&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;sys/socket.h&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;netinet/in.h&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;arpa/inet.h&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;unistd.h&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classWebManager.html">   21</a></span>&#160;<span class="keyword">class </span><a class="code" href="classWebManager.html">WebManager</a></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;{</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> Port; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span>* Adress = <span class="stringliteral">&quot;127.0.0.1&quot;</span>; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">struct </span>sockaddr_in addr; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">int</span> listener; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="classWebManager.html#a61d581b915083667485faa0704ecd9ca">WebManager</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> port);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classWebManager.html#a00c47dc47ee0b2500d7e33e23de571d6">start_listening</a>();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classWebManager.html#a09b427748c37346312d0efceae34c78a">new_bind</a>();</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classWebManager.html#ab2a507c61ab8f3e0401c33ae160f782e">accepting</a>();</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classWebManager.html#a876ae11495f522e8c48cf10550857d05">receiving</a>(<span class="keywordtype">int</span> sock, <span class="keywordtype">void</span>*buf, <span class="keywordtype">int</span> size);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classWebManager.html#aaec4039b1bbd927cc21180978368fad9">sending</a>(<span class="keywordtype">int</span> sock, <span class="keywordtype">void</span>*buf, <span class="keywordtype">int</span> sizeb);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;};</div>
+<div class="ttc" id="aclassWebManager_html"><div class="ttname"><a href="classWebManager.html">WebManager</a></div><div class="ttdoc">Класс, обеспечивающий работу с сокетами и сетовое взаимодействие</div><div class="ttdef"><b>Definition:</b> WebManager.h:22</div></div>
+<div class="ttc" id="aclassWebManager_html_a00c47dc47ee0b2500d7e33e23de571d6"><div class="ttname"><a href="classWebManager.html#a00c47dc47ee0b2500d7e33e23de571d6">WebManager::start_listening</a></div><div class="ttdeci">void start_listening()</div><div class="ttdoc">Установка сокета в режим ожидания</div><div class="ttdef"><b>Definition:</b> WebManager.cpp:32</div></div>
+<div class="ttc" id="aclassWebManager_html_a09b427748c37346312d0efceae34c78a"><div class="ttname"><a href="classWebManager.html#a09b427748c37346312d0efceae34c78a">WebManager::new_bind</a></div><div class="ttdeci">int new_bind()</div><div class="ttdoc">Привязка сокета к адресу</div><div class="ttdef"><b>Definition:</b> WebManager.cpp:25</div></div>
+<div class="ttc" id="aclassWebManager_html_a61d581b915083667485faa0704ecd9ca"><div class="ttname"><a href="classWebManager.html#a61d581b915083667485faa0704ecd9ca">WebManager::WebManager</a></div><div class="ttdeci">WebManager(unsigned int port)</div><div class="ttdoc">Конструктор</div><div class="ttdef"><b>Definition:</b> WebManager.cpp:16</div></div>
+<div class="ttc" id="aclassWebManager_html_a876ae11495f522e8c48cf10550857d05"><div class="ttname"><a href="classWebManager.html#a876ae11495f522e8c48cf10550857d05">WebManager::receiving</a></div><div class="ttdeci">int receiving(int sock, void *buf, int size)</div><div class="ttdoc">Приём данных</div><div class="ttdef"><b>Definition:</b> WebManager.cpp:47</div></div>
+<div class="ttc" id="aclassWebManager_html_aaec4039b1bbd927cc21180978368fad9"><div class="ttname"><a href="classWebManager.html#aaec4039b1bbd927cc21180978368fad9">WebManager::sending</a></div><div class="ttdeci">void sending(int sock, void *buf, int sizeb)</div><div class="ttdoc">Отправка данных</div><div class="ttdef"><b>Definition:</b> WebManager.cpp:54</div></div>
+<div class="ttc" id="aclassWebManager_html_ab2a507c61ab8f3e0401c33ae160f782e"><div class="ttname"><a href="classWebManager.html#ab2a507c61ab8f3e0401c33ae160f782e">WebManager::accepting</a></div><div class="ttdeci">int accepting()</div><div class="ttdoc">Приём соединения</div><div class="ttdef"><b>Definition:</b> WebManager.cpp:38</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>
