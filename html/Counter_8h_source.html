@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Курсовая работа 22ПИ2 Чапаева Е.В.: Исходный файл Counter.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Курсовая работа 22ПИ2 Чапаева Е.В.
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Сервер</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Counter.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="Counter_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;exception&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="ErrorTracker_8h.html">ErrorTracker.h</a>&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classCounter.html">   16</a></span>&#160;<span class="keyword">class </span><a class="code" href="classCounter.html">Counter</a></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;int16_t result[1]; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classCounter.html#a1e05f69b5240fbab3e7ab351672167f0">   25</a></span>&#160;    <a class="code" href="classCounter.html#a1e05f69b5240fbab3e7ab351672167f0">Counter</a>(){};</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classCounter.html#a008d2321eb92a7dcee13b4bb320022d9">   37</a></span>&#160;    int16_t * <a class="code" href="classCounter.html#a008d2321eb92a7dcee13b4bb320022d9">summ</a>(std::vector&lt;int16_t&gt; arr)</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keywordflow">try</span>{</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            <span class="keywordflow">if</span> (arr.empty()){</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordflow">throw</span> <a class="code" href="classserver__error.html">server_error</a>(std::string(<span class="stringliteral">&quot;Count Error&quot;</span>));}</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordflow">for</span> (std::vector&lt;int16_t&gt;::iterator it = arr.begin() ; it != arr.end(); ++it){</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        std::cout &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; *it;}</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        std::cout &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordtype">double</span> avg = 0;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordflow">for</span> (uint i = 0; i &lt; arr.size(); i++) {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            avg += arr[i];</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        }</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        result[0] = avg;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        }<span class="keywordflow">catch</span>(std::exception &amp;e){</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <span class="keywordflow">throw</span> <a class="code" href="classserver__error.html">server_error</a>(std::string(<span class="stringliteral">&quot;Count Error&quot;</span>));</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;};</div>
+<div class="ttc" id="aErrorTracker_8h_html"><div class="ttname"><a href="ErrorTracker_8h.html">ErrorTracker.h</a></div><div class="ttdoc">Класс для обработки ошибок</div></div>
+<div class="ttc" id="aclassCounter_html"><div class="ttname"><a href="classCounter.html">Counter</a></div><div class="ttdoc">Класс для вычислений по вектору</div><div class="ttdef"><b>Definition:</b> Counter.h:17</div></div>
+<div class="ttc" id="aclassCounter_html_a008d2321eb92a7dcee13b4bb320022d9"><div class="ttname"><a href="classCounter.html#a008d2321eb92a7dcee13b4bb320022d9">Counter::summ</a></div><div class="ttdeci">int16_t * summ(std::vector&lt; int16_t &gt; arr)</div><div class="ttdoc">Вычисляет сумму вектора</div><div class="ttdef"><b>Definition:</b> Counter.h:37</div></div>
+<div class="ttc" id="aclassCounter_html_a1e05f69b5240fbab3e7ab351672167f0"><div class="ttname"><a href="classCounter.html#a1e05f69b5240fbab3e7ab351672167f0">Counter::Counter</a></div><div class="ttdeci">Counter()</div><div class="ttdoc">Конструктор без параметров</div><div class="ttdef"><b>Definition:</b> Counter.h:25</div></div>
+<div class="ttc" id="aclassserver__error_html"><div class="ttname"><a href="classserver__error.html">server_error</a></div><div class="ttdoc">Класс ошибок</div><div class="ttdef"><b>Definition:</b> ErrorTracker.h:42</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>
